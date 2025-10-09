@@ -1,4 +1,4 @@
-<?php require_once 'config.php'; ?>
+<?php require_once 'functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,5 +20,4 @@
         <a href="admin.php" class="btn admin-btn">Admin Panel (Edit Questions)</a>
     </div>
 </body>
-
 </html>
