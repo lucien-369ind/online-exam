@@ -22,6 +22,7 @@ if (empty($questions)) {
 </head>
 <body>
     <div class="quiz-container">
+        <img src="logo.png" alt="Online Exam Logo" class="logo"> <!-- Change src to your logo file/URL here -->
         <h2><?php echo ucfirst($subject); ?> MCQ Exam</h2>
         <p><a href="index.php" class="back-link">← Back to Home</a></p>
         
