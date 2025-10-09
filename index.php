@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="logo.png" alt="Online Exam Logo" class="logo"> <!-- Change src to your logo file/URL here -->
         <h1>Online Examination Portal</h1>
         <p>Select a subject to start the MCQ-based exam.</p>
         <div class="button-grid">
