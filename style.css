@@ -1,0 +1,304 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container, .quiz-container, .admin-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1, h2, h3 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Button Grid and Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.admin-btn {
+    background-color: #28a745;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 250px;
+}
+
+.subject-btn.active {
+    background-color: #28a745;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    max-width: 600px;
+}
+
+.question {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.question label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.options input[type="radio"] {
+    margin-right: 8px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.submit-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.question-count {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Answer Highlighting (JS Applied) */
+.correct-answer {
+    background-color: #d4edda !important;
+    color: #155724;
+    border: 2px solid #c3e6cb !important;
+}
+
+.incorrect-answer {
+    background-color: #f8d7da !important;
+    color: #721c24;
+    border: 2px solid #f5c6cb !important;
+}
+
+/* Admin Styles */
+.admin-container {
+    max-width: 900px;
+}
+
+.question-list {
+    margin: 20px 0;
+}
+
+.question-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.question-item h4 {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.edit-btn, .save-btn, .clear-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover, .save-btn:hover {
+    background-color: #0056b3;
+}
+
+.clear-btn {
+    background-color: #6c757d;
+}
+
+.clear-btn:hover {
+    background-color: #545b62;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.admin-form {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.admin-form input[type="text"], .admin-form textarea, .admin-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.admin-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.admin-form select {
+    width: auto;
+    padding: 8px;
+}
+
+/* Messages */
+.error, .success {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Links */
+.back-link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container, .quiz-container, .admin-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        max-width: 150px;
+    }
+    
+    .options {
+        margin-left: 0;
+    }
+}
